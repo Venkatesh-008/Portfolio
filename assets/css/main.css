@@ -1,0 +1,448 @@
+:root {
+  --purple: #9449e9;
+  --purples: #5d00c7;
+  --white: white;
+  --black: black;
+  --grey: #DFDFDE;
+  --rotate: rgb(73, 22, 73);
+  --BigFont: 'Merriweather', serif;
+  --HeadingsFont: 'Bona Nova SC', serif;
+  --SmallFont: 'Nunito', sans-serif;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  text-transform: capitalize;
+  border: none;
+  outline: none;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+*::selection {
+  color: var(--white);
+  background-color: var(--purple);
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+body {
+  background-color: var(--black);
+}
+
+header {
+  text-align: end;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+header h1 {
+  font-size: 4rem;
+}
+
+p {
+  font-family: var(--SmallFont);
+  font-style: italic;
+}
+
+section {
+  padding: 2rem 5%;
+}
+
+::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background-color: var(--purple);
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--black);
+}
+
+.swiper-pagination-bullet {
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50rem;
+  background-color: var(--grey);
+}
+
+.swiper-pagination-bullet-active {
+  width: 3rem;
+  background: var(--purple);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.typed-container,
+.name-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 40px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+#typed-text,
+#name-animation {
+  font-family: monospace;
+  font-size: 18px;
+  min-width: 100%;
+  text-align: center;
+}
+
+/* --- Important: Heading --- */
+.heading {
+  margin-bottom: 2rem;
+}
+
+.heading h2 {
+  text-align: center;
+  padding-bottom: 2rem;
+  color: var(--purple);
+  font-size: 4rem;
+  font-family: var(--HeadingsFont);
+  font-weight: 800;
+  font-style: normal;
+}
+
+.heading h2 span {
+  position: relative;
+  z-index: 0;
+  color: var(--white);
+  font-family: var(--HeadingsFont);
+  font-style: normal;
+}
+
+.heading h2 span::before {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  z-index: -1;
+  background: var(--purple);
+  height: 0.2rem;
+  width: 80%;
+  margin-left: 10%;
+}
+
+/* --- Important: Navbar --- */
+.navbar {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 40px;
+  padding-left: 8px;
+  padding-right: 10px;
+  margin-right: 20px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: width 0.3s ease;
+}
+
+.navbar ul {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: flex-start;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar li:hover a {
+  justify-content: center;
+  padding-left: 0;
+}
+
+.navbar li {
+  list-style: none;
+  width: 60px;
+  height: 60px;
+  position: relative;
+  background: var(--white);
+  font-weight: bold;
+  border-radius: 60px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: width 0.5s ease;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  animation: iconSlideFromTop 0.8s ease-out 0.3s forwards;
+  opacity: 0;
+}
+
+.navbar li::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, var(--i), var(--j));
+  border-radius: 60px;
+  opacity: 0;
+  transition: 0.5s;
+  z-index: 1;
+}
+
+.navbar li::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, var(--i), var(--j));
+  border-radius: 60px;
+  filter: blur(15px);
+  z-index: 0;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.navbar li:hover {
+  width: 150px;
+  box-shadow: none;
+}
+
+.navbar li:hover::before {
+  opacity: 1;
+}
+
+.navbar li:hover::after {
+  opacity: 0.5;
+}
+
+.navbar li a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  z-index: 2;
+  padding-left: 15px;
+  transition: justify-content 0.3s ease, padding-left 0.3s ease;
+}
+
+.navbar .icon ion-icon {
+  color: black;
+  font-size: 1.75em;
+  transition: 0.5s;
+  transition-delay: 0.25s;
+}
+
+.navbar li:hover .icon ion-icon {
+  transform: scale(0);
+  color: var(--white);
+  transition-delay: 0s;
+}
+
+.navbar .title {
+  position: absolute;
+  left: 60px;
+  white-space: nowrap;
+  color: var(--black);
+  font-size: 1.4em;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: transform 0.5s ease, left 0.5s ease;
+  transition-delay: 0s;
+}
+
+.navbar li:hover .title {
+  font-weight: bold;
+  left: 50%;
+  transform: translateX(-50%) scale(1);
+  transition-delay: 0.25s;
+}
+
+.hamburger,
+.mobile-nav {
+  display: none;
+}
+
+.icon {
+  position: absolute;
+  font-size: 14px;
+  left: 8px;
+}
+
+/* --- Important: Scroll-Top Button --- */
+.scroll-top {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  height: 5rem;
+  width: 5rem;
+  background: var(--white);
+  color: var(--black);
+  border: 2px solid var(--white);
+  border-radius: 50%;
+  font-size: 2rem;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.scroll-top.show {
+  opacity: 1;
+  pointer-events: auto;
+  animation: fadeSlideUp 0.4s ease forwards;
+}
+
+.scroll-top:hover {
+  background: var(--white);
+  color: var(--black);
+  box-shadow: 0 0 15px var(--white);
+  animation: rocketWiggle 0.6s ease;
+  transform: scale(1.1);
+}
+
+.scroll-top i {
+  pointer-events: none;
+  animation: rocketWiggleLoop 0.8s ease-in-out infinite;
+}
+
+@keyframes rocketWiggleLoop {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-10deg); }
+  75% { transform: rotate(10deg); }
+}
+
+/* --- Important: Cursor --- */
+body {
+  cursor: none;
+}
+
+.Cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  filter: url("#goo");
+  z-index: 1000;
+  transition: opacity 0.3s ease;
+}
+
+.Cursor span {
+  position: absolute;
+  display: block;
+  width: 35px;
+  height: 35px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(72,61,139,0.7), rgba(186,85,211,0.7));
+  transform: translate(-50%, -50%);
+}
+
+/* --- Important: Footer --- */
+.footer-medium {
+  background-color: var(--black);
+  color: var(--white);
+  padding: 2rem 1rem;
+  font-family: var(--HeadingsFont);
+  text-align: center;
+  border-top: 1px solid rgba(48, 41, 41, 0.925);
+}
+
+.footer-social {
+  margin-bottom: 1rem;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.footer-icons i {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  border-radius: 50%;
+  border: 2px solid;
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.footer-icons i.fa-instagram:hover {
+  background-color: #e4405f;
+  color: #fff;
+  animation: bounceIcon 0.6s ease;
+  border-color: black;
+}
+
+.footer-icons i.fa-discord:hover {
+  background-color: #5865F2;
+  color: #fff;
+  animation: bounceIcon 0.6s ease;
+  border-color: black;
+}
+
+.footer-icons i.fa-facebook:hover {
+  background-color: #1877f2;
+  color: #fff;
+  animation: bounceIcon 0.6s ease;
+  border-color: black;
+}
+
+.footer-icons i.fa-linkedin:hover {
+  background-color: #0077b5;
+  color: #fff;
+  animation: bounceIcon 0.6s ease;
+  border-color: black;
+}
+
+.footer-icons i.fa-x-twitter:hover {
+  background-color: #1da1f2;
+  color: #fff;
+  animation: bounceIcon 0.6s ease;
+  border-color: black;
+}
+
+@keyframes bounceIcon {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-10px) scale(1.15);
+  }
+}
+
+.footer-info p {
+  margin: 0;
+  font-size: 1.4rem;
+}

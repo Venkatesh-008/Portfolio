@@ -1,0 +1,1154 @@
+
+
+/*--------------------- 9- Testimonials Area CSS (Start) ---------------------*/
+.testimonial-slider{
+    position: relative;
+    padding-bottom: 4rem;
+    overflow: hidden;
+}
+
+.testi-item{
+    text-align: center;
+    border: 0.1rem solid var(--grey);
+    border-radius: 0.5rem;
+    padding: 4rem 2rem;
+}
+
+.testi-item:hover{
+    border-color: var(--purple);
+}
+
+.testi-item img{
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    border: 0.5rem solid var(--white);
+}
+
+.testi-item .fa-quote-left{
+    display: block;
+    font-size: 3rem;
+    color: var(--white);
+    margin: 1rem 0;
+}
+
+.testi-item p{
+    color: var(--grey);
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+.testi-item .intro{
+    margin: 1rem 0;
+}
+
+.testi-item .intro h3{
+    font-size: 2rem;
+    color: var(--white);
+    padding-bottom: 0.5rem;
+}
+
+.testi-item .intro h5{
+    color: var(--purple);
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+/*--------------------- 9- Testimonials Area CSS (End) ---------------------*/
+
+
+
+/*--------------------- 10- Blog Area CSS (Start) ---------------------*/
+.blog-slider{
+    position: relative;
+    padding-bottom: 4rem;
+    overflow: hidden;
+}
+
+.blog-item{
+    background-color: #222;
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.blog-item .image{
+    height: 25rem;
+    overflow: hidden;
+}
+
+.blog-item:hover .image img{
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+}
+
+.blog-item .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.blog-item .content{
+    padding: 2rem 1rem;
+}
+
+.blog-item .content .intro{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    border-bottom: 0.2rem solid var(--grey);
+    padding: 1rem 0;
+    margin-bottom: 1.5rem;
+}
+
+.blog-item .content .intro h5{
+    font-size: 1.5rem;
+}
+
+.blog-item .content .intro h5 i{
+    color: var(--purple);
+    padding-right: 0.5rem;
+}
+
+.blog-item .content .intro h5 span{
+    color: var(--grey);
+}
+
+.blog-item .content .main-heading{
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--white);
+}
+
+.blog-item p{
+    padding: 1rem 0;
+    font-size: 1.6rem;
+    color: var(--grey);
+}
+
+.blog-item .btn{
+    margin-top: 1rem;
+}
+
+/*--------------------- 10- Blog Area CSS (End) ---------------------*/
+
+
+
+/*--------------------- 11- Contact Area CSS (Start) ---------------------*/
+.contact .alert{
+    font-size: 2rem;
+    color: var(--purple);
+    border-radius: 0.5rem;
+    padding-left: 1rem;
+}
+
+.contact .box-container{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.contact-info{
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 42rem;
+        flex: 1 1 42rem;
+}
+
+.contact-info h3{
+    font-size: 3rem;
+    color: var(--white);
+}
+
+.contact-info > p{
+    font-size: 1.6rem;
+    color: var(--grey);
+    padding: 0.5rem 0;
+}
+
+.contact-info .info-item{
+    padding: 1rem 0;
+}
+
+.contact-info .info-item .gmail,
+.contact-info .info-item .linkedin,
+.contact-info .info-item .github{
+    text-transform: none;
+}
+
+.contact-info .info-item h4{
+    font-size: 1.8rem;
+    color: var(--white);
+}
+
+.contact-info .info-item .detail{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.contact-info .info-item .detail .fas,
+.contact-info .info-item .detail .fab{
+    border-radius: 50%;
+    color: var(--purple);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.contact-info .info-item .detail p{
+    font-size: 1.6rem;
+    color: var(--grey);
+    line-height: 1.6;
+    padding-left: 1rem;
+}
+
+.contact-form{
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 42rem;
+        flex: 1 1 42rem;
+}
+
+.contact-form .box{
+    width: 100%;
+    text-transform: none;
+    color: var(--grey);
+    font-size: 1.6rem;
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin: 0.5rem 0;
+    background-color: #222;
+}
+
+.contact-form .box:focus{
+    border-color: var(--white);
+}
+
+.contact-form .box::placeholder{
+    color: var(--grey);
+}
+
+.contact-form textarea{
+    height: 15rem;
+    resize: none;
+}
+
+.contact-form .btn{
+    margin-top: 1rem;
+}
+
+/*--------------------- 11- Contact Area CSS (End) ---------------------*/
+
+
+
+/*--------------------- 12- Footer Area CSS (Start) ---------------------*/
+footer{
+    background-color: var(--purple);
+    padding: 2rem 0;
+    text-align: center;
+}
+
+footer .social{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+footer .social .fab{
+    background-color: var(--black);
+    border-radius: 50%;
+    height: 4rem;
+    width: 4rem;
+    color: var(--white);
+    font-size: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 0 0.5rem;
+}
+
+footer .social .fab:hover{
+    color: var(--black);
+    background-color: var(--white);
+}
+
+footer .content p{
+    font-size: 2rem;
+    color: var(--white);
+}
+
+footer .content p span{
+    color: var(--black);
+}
+
+/*--------------------- 12- Footer Area CSS (End) ---------------------*/
+
+
+
+/*--------------------- 13- Scroll-Top (Start) ---------------------*/
+.scroll-top{
+    position: fixed;
+    bottom: 1rem;
+    right:1rem;
+    height: 5rem;
+    width: 5rem;
+    font-size: 3rem;
+    font-weight:lighter;
+    background: var(--black);
+    color: var(--white);
+    border: 0.2rem solid var(--white);
+    border-radius: 50%;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    z-index: 999;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .scroll-top:hover{
+    background: var(--white);
+    color:var(--black);
+  }
+
+/*--------------------- 13- Scroll-Top (End) ---------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-------------------- Testimonials Area (Start) -------------------->
+<!-- <section class="testimonial" id="testimonial">
+
+    <div class="heading">
+        <h2><span>testimonials</span></h2>
+    </div>
+
+    <div class="swiper-container testimonial-slider">
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide testi-item">
+                <img src="assets/images/Testimonials/pic-1.png" alt="Testimonial-Pic" />
+
+                <i class="fas fa-quote-left"></i>
+
+                <p class="comment">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Voluptatum deleniti architecto harum natus aliquid nostrum 
+                    ad asperiores sequi, eligendi sint assumenda eum illo similique 
+                    repellendus.
+                </p>
+
+                <div class="intro">
+                    <h3>jason roy</h3>
+                    <h5>web developer</h5>
+                </div>
+            </div>
+
+            <div class="swiper-slide testi-item">
+                <img src="assets/images/Testimonials/pic-2.png" alt="Testimonial-Pic" />
+
+                <i class="fas fa-quote-left"></i>
+
+                <p class="comment">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Voluptatum deleniti architecto harum natus aliquid nostrum 
+                    ad asperiores sequi, eligendi sint assumenda eum illo similique 
+                    repellendus.
+                </p>
+
+                <div class="intro">
+                    <h3>evelyn jones</h3>
+                    <h5>freelancer</h5>
+                </div>
+            </div>
+
+            <div class="swiper-slide testi-item">
+                <img src="assets/images/Testimonials/pic-3.png" alt="Testimonial-Pic" />
+
+                <i class="fas fa-quote-left"></i>
+
+                <p class="comment">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Voluptatum deleniti architecto harum natus aliquid nostrum 
+                    ad asperiores sequi, eligendi sint assumenda eum illo similique 
+                    repellendus.
+                </p>
+
+                <div class="intro">
+                    <h3>luke wood</h3>
+                    <h5>graphic designer</h5>
+                </div>
+            </div>
+
+            <div class="swiper-slide testi-item">
+                <img src="assets/images/Testimonials/pic-4.png" alt="Testimonial-Pic" />
+
+                <i class="fas fa-quote-left"></i>
+
+                <p class="comment">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Voluptatum deleniti architecto harum natus aliquid nostrum 
+                    ad asperiores sequi, eligendi sint assumenda eum illo similique 
+                    repellendus.
+                </p>
+
+                <div class="intro">
+                    <h3>sarah glenn</h3>
+                    <h5>freelancer</h5>
+                </div>
+            </div>
+
+            <div class="swiper-slide testi-item">
+                <img src="assets/images/Testimonials/pic-5.png" alt="Testimonial-Pic" />
+
+                <i class="fas fa-quote-left"></i>
+
+                <p class="comment">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Voluptatum deleniti architecto harum natus aliquid nostrum 
+                    ad asperiores sequi, eligendi sint assumenda eum illo similique 
+                    repellendus.
+                </p>
+
+                <div class="intro">
+                    <h3>samit patel</h3>
+                    <h5>graphic designer</h5>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="swiper-pagination swiper-pagination1"></div>
+
+    </div>
+</section> -->
+<!-------------------- Testimonials Area (End) -------------------->
+
+
+<!-------------------- Contact Area (Start) -------------------->
+<!-- <section class="contact" id="contact">
+
+    <div class="heading">
+        <h2><span>contact</span> me</h2>
+    </div>
+
+    <div class="box-container">
+
+        <div class="contact-info">
+
+            <h3>get in touch</h3>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+            <div class="info-item">
+                <h4>Phone:</h4>
+                <div class="detail">
+                    <div class="fas fa-phone"></div>
+                    <p>+123-456-789</p>
+                </div>
+                <div class="detail">
+                    <div class="fas fa-phone"></div>
+                    <p>+111-222-333</p>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <h4>email:</h4>
+                <div class="detail">
+                    <div class="fas fa-envelope"></div>
+                    <p class="gmail">abc@gmail.com</p>
+                </div>
+                <div class="detail">
+                    <div class="fas fa-envelope"></div>
+                    <p class="gmail">xyz@gmail.com</p>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <h4>linkedin:</h4>
+                <div class="detail">
+                    <div class="fab fa-linkedin"></div>
+                    <p class="linkedin">https://www.linkedin.com/</p>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <h4>github:</h4>
+                <div class="detail">
+                    <div class="fab fa-github"></div>
+                    <p class="github">https://github.com/</p>
+                </div>
+            </div>
+        </div>
+
+        <form method="post" class="contact-form" id="contactUs-Form">
+                
+            <input type="text" name="name" class="box" id="name" placeholder="name" required />
+            <input type="email" name="email" class="box" id="email" placeholder="email" required />
+            <input type="text" name="subject" class="box" id="subject" placeholder="subject" required />
+            <textarea cols="30" rows="10" name="comment" id="comment" class="box" placeholder="message"></textarea>
+            <button type="submit" class="btn" name="submit" id="submit">send message</button>
+            
+            <span class="alert" id="msg"></span>
+            
+        </form>
+        
+    </div>
+
+</section> -->
+<!-------------------- Contact Area (End) -------------------->
+
+
+
+<!-------------------- Footer Area (Start) -------------------->
+<!-- <footer>
+    <div class="social">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-linkedin-in"></a>
+    </div>
+
+    <div class="content">
+        <p>created by <span>AS_Designs</span> | all rights reserved</p>
+    </div>
+</footer> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------- 5- About Area CSS (Start) ---------------------*/
+.about .box-container{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: space-between  ;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 4rem 2rem;
+}
+.about .image {
+    width: 100%; /* Make it full width or adjust as needed */
+    max-width: 500px; /* Control max size */
+    margin: 0 auto;
+    overflow: hidden;
+    flex: 1 1 40%;
+
+    border-radius: 20px; /* Optional: make it rounded */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s ease;
+  }
+  
+  .about .image img {
+    width: 100%;
+    height: auto;
+    filter: grayscale(100%);
+    transition: filter 0.5s ease, transform 0.5s ease;
+    display: block;
+  }
+  
+  .about .image:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.05); /* Slight zoom on hover */
+  }
+  
+
+  
+.about .content{
+    flex: 1 1 55%;
+
+        width: 60%;
+}
+#name-animation::after {
+  content: '|';
+  animation: blink 2s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.venkatesh{
+    color: white;
+}
+.about .content h2{
+    font-size: 3rem;
+    color: var(--purple);
+    padding-bottom: 1rem;
+}
+
+.about .content > p{
+    font-size: 1.6rem;
+    color: var(--grey);
+    line-height: 1.6;
+    padding-bottom: 1rem;
+}
+
+.about .content .about-info{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.about .content .about-info .info{
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 15rem;
+        flex: 1 1 15rem;
+}
+
+.about .content .about-info .info h4{
+    font-size: 1.6rem;
+    color: var(--white);
+    padding-bottom: 1rem;
+}
+
+.about .content .about-info .info span{
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--grey);
+}
+
+.about .content .about-info .info .btn{
+    margin-top: 1rem;
+}
+
+.counting{
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 35rem;
+        flex: 1 1 35rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.counting .box{
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 18rem;
+        flex: 1 1 18rem;
+    text-align: center;
+    background-color: #222;
+    padding: 2rem;
+}
+
+.counting .box .count{
+    font-size: 3.5rem;
+    color: var(--purple);
+    padding-bottom: 0.5rem;
+}
+
+.counting .box h3{
+    font-size: 1.8rem;
+    color: var(--white);
+}
+
+.skill-container{
+    padding: 2rem 0;
+}
+
+.skills{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+}
+
+.skill-item{
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 30rem;
+        flex: 1 1 30rem;
+    margin-right: 1.5rem;
+}
+
+.skill-item .box{
+    padding:1rem 0;
+}
+
+ .skill-item .box h3{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding:.7rem 0;
+    font-size: 1.7rem;
+    color: var(--white);
+    font-weight: 400;
+}
+
+ .skill-item .box .progress-bar{
+    width:100%;
+    background:#222;
+    overflow:hidden;
+    height:1rem;
+    border-radius: 50rem;
+}
+
+ .skill-item .box .progress-bar span{
+    display:block;
+    height:100%;
+    background: var(--purple);
+    width: 0; /* Start from 0 */
+    transition: width 2s ease;
+}
+
+/*--------------------- 5- About Area CSS (End) ---------------------*/
+
+
+
+/*--------------------- 6- Qualification Area CSS (Start) ---------------------*/
+.qualification .box-container{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 4rem;
+}
+
+.education, .experience{
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 40rem;
+        flex: 1 1 40rem;
+}
+
+.experience-item{
+    position: relative;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 40rem;
+        flex: 1 1 40rem;
+    padding: 0 3rem 2rem 3rem;
+    border-left: 0.2rem solid var(--purple);
+    margin-left: 2rem;
+}
+
+.experience-item i{
+    position: absolute;
+    top: 0; 
+    left: -2.5rem;
+    height:5rem;
+    width: 5rem;
+    border-radius: 50%;
+    line-height: 5rem;
+    text-align: center;
+    font-size: 2rem;
+    color:var(--white);
+    background:var(--purple);
+}
+
+.experience-item .content{
+    border-radius: 0.5rem;
+    padding: 1rem 2rem;
+    border-left: 2rem;
+}
+
+.experience-item span{
+    background: #222;
+    color: var(--white);
+    padding: 0.5rem 1.5rem;
+    font-size: 1.8rem;
+    border-radius: 50rem;
+}
+
+.experience-item h3{
+    font-size: 2.5rem;
+    color: var(--white);
+    padding: 2rem 0;
+}
+
+.experience-item p{
+    color: var(--grey);
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+}
+
+/*--------------------- 6- Qualification Area CSS (End) ---------------------*/
+
+
+
+/*--------------------- 7- Services Area CSS (End) ---------------------*/
+
+
+
+/*--------------------- 8- Portfolio Area CSS (Start) ---------------------*/
+.box-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  padding: 2rem;
+}
+.project-item {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  border: 2px solid transparent; /* default invisible */
+  transition: border 0.4s ease, box-shadow 0.4s ease;
+}
+
+.project-item:hover {
+  border: 2px solid #ffffff55; /* light border on hover */
+  box-shadow: 0 20px 60px rgba(255, 255, 255, 0.2); /* optional glow */
+}
+
+.project-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease, filter 0.5s ease, mask-image 0.5s ease;
+  transform: scale(1);
+}
+
+.project-item:hover img {
+  transform: scale(1.1); /* image zoom */
+  filter: brightness(0.5) contrast(1.2);
+  mask-image: radial-gradient(circle at center, white 20%, transparent 80%);
+}
+
+
+
+
+
+
+
+
+/* NUMBER EFFECT */
+.project-item .number {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 15rem;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.9);
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.5s ease, transform 0.5s ease, font-size 0.3s ease;
+  z-index: 1;
+  letter-spacing: 8px;
+  text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.project-item .number:before {
+  content: var(--num, "01");
+}
+
+.project-item:hover .number {
+  opacity: 1;
+  transform: scale(1);
+  font-size: 18rem;
+  letter-spacing: 10px;
+}
+
+/* CONTENT WRAPPER */
+.project-item .content {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 2;
+}
+
+/* Make content appear on hover */
+.project-item:hover .content {
+  opacity: 1;
+}
+
+/* LINK BUTTON STYLING */
+.project-item .content .view-btn {
+  padding: 1rem;
+  font-size: 1.2rem;
+  background: linear-gradient(to bottom right, #9b59b6 40%, #a66bbe 100%);
+
+box-shadow: 0 4px 15px rgba(155, 89, 182, 0.6);
+
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  
+  transition: all 0.3s ease;
+  animation: zoomInOut 1.5s ease-in-out infinite;
+}
+@keyframes zoomInOut {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+
+.project-item .content .view-btn i {
+  font-size: 1.5rem;
+}
+
+.project-item .content .view-btn:hover {
+  background-color: #ff9d00;
+  transform: scale(1.1);
+}
+
+/* HEADING NEXT TO BUTTON */
+.project-item .content .heading {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+/*--------------------- 8- Portfolio Area CSS (End) ---------------------*/
+
+@media (max-width: 600px) {
+    .typed-container,
+    .name-container {
+      width: 180px;
+      font-size: 14px;
+    }
+  }
+  
+
+
+
+
+
+
+  .contact {
+    background: #000; /* Black background */
+    padding: 2rem;
+    display: grid;
+    row-gap: 1.5rem;
+    color: #f0f0f0; /* Global light text */
+  }
+  
+  .contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    align-items: stretch;
+  }
+  
+  .contact-content {
+    padding-top: 0.5rem;
+    display: grid;
+    row-gap: 2.5rem;
+    height: 100%;
+  }
+  
+  .contact-card {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    align-items: center;
+    column-gap: 3rem;
+    position: relative;
+  }
+  
+  .contact-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: #1a1a1a;
+    display: grid;
+    place-items: center;
+    position: relative;
+    border: 2px solid #333;
+  }
+  
+  .contact-icon::before {
+    content: "";
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 2px;
+    background-color: #444;
+  }
+  
+  .contact-icon i {
+    color: #7b59ff; /* Soft purple accent */
+    font-size: 18px;
+  }
+  
+  .contact-title {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    font-size: 18px;
+    color: #fff;
+  }
+  
+  .contact-data {
+    font-size: 13px;
+    color: #ccc;
+  }
+  
+  .contact-form {
+    display: grid;
+    height: 100%;
+    row-gap: 1.25rem;
+  }
+  
+  .contact-form-label {
+    text-indent: 1.5rem;
+    font-size: 14px;
+    color: #ddd;
+  }
+  
+  .contact-form-label b {
+    color: #ff4d4d;
+  }
+  
+  .contact-form-input {
+    background-color: #222;
+    color: #fff;
+    padding: 1rem 1.5rem;
+    border-radius: 1.5rem;
+    border: 1px solid #444;
+    transition: 0.3s ease;
+  }
+  
+  .contact-form-input:focus {
+    border-color: #7b59ff;
+    outline: none;
+    box-shadow: 0 0 6px #7b59ff80;
+  }
+  
+  .contact-form-area {
+    resize: none;
+    height: 140px;
+  }
+  
+  .subject-div,
+  .message-div {
+    grid-column: span 2;
+  }
+  
+  .contact-actions {
+    display: grid;
+    justify-items: end;
+    margin-top: 1rem;
+  }
+  
+  .contact-actions .btn {
+    padding: 0.6rem 1.5rem;
+    font-size: 14px;
+    border-radius: 0.9rem;
+    width: fit-content;
+    background-color: #7b59ff;
+    color: white;
+    border: none;
+    transition: 0.3s ease;
+  }
+  
+  .contact-actions .btn:hover {
+    background-color: #9e7dff;
+    box-shadow: 0 0 10px #7b59ff;
+  }
+  

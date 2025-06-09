@@ -1,0 +1,163 @@
+.skill-container {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+.skills-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+.skills-circle-container {
+  width: 300px;
+  height: 300px;
+  background-color: var(--white);
+  display: flex;
+  border-radius: 12px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  transform-origin: center;
+}
+.skills-circle-container:hover {
+  transform: scale(1.05) rotateZ(-2deg);
+  box-shadow: 0 12px 25px rgba(128, 0, 128, 0.2);
+  cursor: pointer;
+  animation: pop-wiggle 0.6s ease-in-out forwards;
+}
+@keyframes pop-wiggle {
+  0%   { transform: scale(1) rotate(0); }
+  30%  { transform: scale(1.05) rotate(-1deg); }
+  60%  { transform: scale(1.03) rotate(1deg); }
+  100% { transform: scale(1.05) rotate(0); }
+}
+.skills-circle-box span {
+  font-size: 20px;
+  font-family: var(--HeadingsFont);
+  position: relative;
+  left: 30%;
+}
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(250px, 1fr));
+  gap: 2rem 4rem;
+  justify-content: center;
+  width: 100%;
+  max-width: 900px;
+}
+.skill-item {
+  flex: 1 1 30rem;
+  margin-right: 1.5rem;
+}
+.skill-item .box {
+  padding: 1rem 0;
+}
+.skill-item .box h3 {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.7rem 0;
+  font-size: 1.7rem;
+  color: var(--white);
+  font-weight: 400;
+}
+.skill-item .box .progress-bar {
+  width: 100%;
+  background: var(--black);
+  overflow: hidden;
+  height: 1rem;
+  border-radius: 50rem;
+}
+.skill-item .box .progress-bar span {
+  display: block;
+  height: 100%;
+  background: var(--purple);
+  width: 0;
+  transition: width 2s ease;
+}
+@keyframes progress {
+  0% { --percentage: 0; }
+  100% { --percentage: var(--value); }
+}
+@property --percentage {
+  syntax: '<number>';
+  inherits: true;
+  initial-value: 0;
+}
+[role="progressbar"] {
+  --percentage: var(--value);
+  --primary: var(--purple);
+  --secondary: var(--black);
+  --size: 150px;
+  animation: progress 2s 0.5s forwards;
+  width: var(--size);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  margin-bottom: 15px;
+}
+[role="progressbar"]::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: conic-gradient(var(--primary) calc(var(--percentage) * 1%), var(--secondary) 0);
+  mask: radial-gradient(white 55%, transparent 0);
+  mask-mode: alpha;
+  -webkit-mask: radial-gradient(#0000 55%, #000 0);
+  -webkit-mask-mode: alpha;
+  border-radius: 50%;
+}
+[role="progressbar"] span {
+  position: relative;
+  z-index: 1;
+  color: var(--primary);
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: var(--font, Arial);
+}
+[role="progressbar"]::after {
+  counter-reset: percentage var(--value);
+  content: counter(percentage) '%';
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: calc(var(--size) / 5);
+  color: var(--primary);
+}
+.skill-section .fade-item {
+  opacity: 0;
+  transform: translateY(40px) scale(0.95);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.skill-section.loaded .fade-item {
+  animation-name: fadeInUpScale;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+}
+.skill-section.loaded .fade-item[data-index="1"] { animation-delay: 0.2s; }
+.skill-section.loaded .fade-item[data-index="2"] { animation-delay: 0.4s; }
+.skill-section.loaded .fade-item[data-index="3"] { animation-delay: 0.6s; }
+.skill-section.loaded .fade-item[data-index="4"] { animation-delay: 0.8s; }
+.skill-section.loaded .fade-item[data-index="5"] { animation-delay: 1s; }
+.skill-section.loaded .fade-item[data-index="6"] { animation-delay: 1.02s; }
+.skill-section.loaded .fade-item[data-index="7"] { animation-delay: 1.04s; }
+@keyframes fadeInUpScale {
+  0%   { opacity: 0; transform: translateY(40px) scale(0.95); }
+  60%  { opacity: 1; transform: translateY(-10px) scale(1.02); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
