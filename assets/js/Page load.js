@@ -57,24 +57,32 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  if (homeSection && homeContent) {
-    const homeObserver = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        homeContent.classList.toggle("loaded", entry.isIntersecting);
-      });
-    }, { threshold: 0.6 });
-    homeObserver.observe(homeSection);
-  }
+ // 🔍 Set dynamic threshold based on screen height
+const isMobile = window.innerWidth <= 768;
+const highThreshold = isMobile ? 0.3 : 0.6;
+const lowThreshold = isMobile ? 0.2 : 0.3;
 
-  if (aboutContainer && aboutSection) {
-    const aboutObserver = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        aboutSection.classList.toggle("loaded", entry.isIntersecting);
-      });
-    }, { threshold: 0.6 });
-    aboutObserver.observe(aboutContainer);
-  }
+// ✅ HOME SECTION
+if (homeSection && homeContent) {
+  const homeObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      homeContent.classList.toggle("loaded", entry.isIntersecting);
+    });
+  }, { threshold: highThreshold });
+  homeObserver.observe(homeSection);
+}
 
+// ✅ ABOUT SECTION
+if (aboutContainer && aboutSection) {
+  const aboutObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      aboutSection.classList.toggle("loaded", entry.isIntersecting);
+    });
+  }, { threshold: highThreshold });
+  aboutObserver.observe(aboutContainer);
+}
+
+// ✅ SKILLS SECTION
 if (skillsSection) {
   const skillsObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -88,29 +96,30 @@ if (skillsSection) {
         resetHorizontalBars();
       }
     });
-  }, { threshold: 0.3 }); // Changed from 0.6 to 0.3
+  }, { threshold: lowThreshold });
   skillsObserver.observe(skillsSection);
 }
 
+// ✅ PROJECT SECTION
+if (projectSection) {
+  const projectObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      entry.target.classList.toggle("loaded", entry.isIntersecting);
+    });
+  }, { threshold: highThreshold });
+  projectObserver.observe(projectSection);
+}
 
-  if (projectSection) {
-    const projectObserver = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        entry.target.classList.toggle("loaded", entry.isIntersecting);
-      });
-    }, { threshold: 0.6 });
-    projectObserver.observe(projectSection);
-  }
+// ✅ CONTACT SECTION
+if (contactSection) {
+  const contactObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      contactSection.classList.toggle("loaded", entry.isIntersecting);
+    });
+  }, { threshold: highThreshold });
+  contactObserver.observe(contactSection);
+}
 
-  // ✅ CONTACT SECTION ANIMATION
-  if (contactSection) {
-    const contactObserver = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        contactSection.classList.toggle("loaded", entry.isIntersecting);
-      });
-    }, { threshold: 0.6 });
-    contactObserver.observe(contactSection);
-  }
 
   // ✅ Initial load check
   window.addEventListener("load", () => {
