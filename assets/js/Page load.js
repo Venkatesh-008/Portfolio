@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
           resetHorizontalBars();
         }
       });
-    }, { threshold: 0.3 });
+    }, { threshold: 0.5 });
     skillsObserver.observe(skillsSection);
   }
 
@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
       entries.forEach(entry => {
         entry.target.classList.toggle("loaded", entry.isIntersecting);
       });
-    }, { threshold: 0.3 });
+    }, { threshold: 0.5 });
     projectObserver.observe(projectSection);
   }
 
@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
       entries.forEach(entry => {
         contactSection.classList.toggle("loaded", entry.isIntersecting);
       });
-    }, { threshold: 0.4 });
+    }, { threshold: 0.5 });
     contactObserver.observe(contactSection);
   }
 

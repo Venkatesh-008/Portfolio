@@ -41,6 +41,11 @@ body {
   background-color: var(--black);
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
+
 header {
   text-align: end;
   padding: 20px;
