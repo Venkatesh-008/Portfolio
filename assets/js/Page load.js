@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
       entries.forEach(entry => {
         homeContent.classList.toggle("loaded", entry.isIntersecting);
       });
-    }, { threshold: 0.5 });
+    }, { threshold: 0.6 });
     homeObserver.observe(homeSection);
   }
 
@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
       entries.forEach(entry => {
         aboutSection.classList.toggle("loaded", entry.isIntersecting);
       });
-    }, { threshold: 0.5 });
+    }, { threshold: 0.6 });
     aboutObserver.observe(aboutContainer);
   }
 
@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
           resetHorizontalBars();
         }
       });
-    }, { threshold: 0.5 });
+    }, { threshold: 0.6 });
     skillsObserver.observe(skillsSection);
   }
 
@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
       entries.forEach(entry => {
         entry.target.classList.toggle("loaded", entry.isIntersecting);
       });
-    }, { threshold: 0.5 });
+    }, { threshold: 0.6 });
     projectObserver.observe(projectSection);
   }
 
@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
       entries.forEach(entry => {
         contactSection.classList.toggle("loaded", entry.isIntersecting);
       });
-    }, { threshold: 0.5 });
+    }, { threshold: 0.6 });
     contactObserver.observe(contactSection);
   }
 
