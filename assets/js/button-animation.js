@@ -11,8 +11,9 @@ window.addEventListener("load", () => {
 
 const words = [
   { text: "Developer", class: "word-purple" },
-  { text: "Designer", class: "word-blue" },
+  { text: "Freelancer", class: "word-blue" },
   { text: "Creator", class: "word-green" },
+  { text: "Designer", class: "word-grey" },
 ];
 
 const element = document.getElementById("typed-word");
@@ -194,6 +195,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+/* ════════════════ About Section CV ════════════════ */
 
 
-  
+    function downloadCV() {
+    const link = document.createElement('a');
+    link.href = '/assets/Files/CV.pdf'; // ✅ your file path
+    link.download = 'Venkatesh-CV.pdf';    // ✅ name when saved
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }

@@ -87,6 +87,9 @@
 .word-green {
   color: #00cc66;
 }
+.word-grey{
+  color: #d88ecc;
+}
 .home .content p {
   font-size: 1.9rem;
   color: var(--white);

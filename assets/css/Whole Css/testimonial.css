@@ -28,8 +28,6 @@
   -webkit-overflow-scrolling: touch;
   margin-left: -2rem;
   padding-left: 2rem;
-
-  /* ⭐ Enable scroll snapping */
   scroll-snap-type: x mandatory;
   scroll-padding-left: 2rem;
 }
@@ -42,8 +40,7 @@
   background: rgba(255, 255, 255, 0.05);
   border-radius: 1rem;
   padding: 3rem 2rem;
-  flex: 0 0 calc((100% - 4rem) / 3); /* 3 per row by default */
-  min-width: 300px;
+  flex: 0 0 calc((100% - 4rem) / 3);
   height: 350px;
   display: flex;
   flex-direction: column;
@@ -55,9 +52,8 @@
   z-index: 0;
   transform-origin: center center;
   margin: 10px 0;
-
-  /* ⭐ Snap each testimonial */
   scroll-snap-align: center;
+  min-width: unset; /* ✅ Fix responsiveness */
 }
 
 .testimonial:hover {
@@ -169,16 +165,31 @@
   opacity: 1;
 }
 
-/* ⭐ Responsive: 2 items for 600–1024px */
+/* ✅ Medium screens (600px–1024px): 2 testimonials */
 @media (max-width: 1024px) {
   .testimonial {
     flex: 0 0 calc((100% - 2rem) / 2);
   }
 }
 
-/* ⭐ Responsive: 1 item for <=600px */
+/* ✅ Small screens (<=600px): 1 testimonial */
 @media (max-width: 600px) {
   .testimonial {
     flex: 0 0 100%;
+    margin-right: 0;
+  }
+
+  .testimonial-slider-wrapper {
+    padding: 1rem;
+  }
+
+  .testimonial-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  .client {
+    width: 60px;
+    height: 60px;
   }
 }
