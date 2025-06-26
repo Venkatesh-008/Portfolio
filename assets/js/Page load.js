@@ -75,22 +75,23 @@ document.addEventListener("DOMContentLoaded", () => {
     aboutObserver.observe(aboutContainer);
   }
 
-  if (skillsSection) {
-    const skillsObserver = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          skillsSection.classList.add("loaded");
-          resetHorizontalBars();
-          animateHorizontalBars();
-          animateCircularBars();
-        } else {
-          skillsSection.classList.remove("loaded");
-          resetHorizontalBars();
-        }
-      });
-    }, { threshold: 0.6 });
-    skillsObserver.observe(skillsSection);
-  }
+if (skillsSection) {
+  const skillsObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        skillsSection.classList.add("loaded");
+        resetHorizontalBars();
+        animateHorizontalBars();
+        animateCircularBars();
+      } else {
+        skillsSection.classList.remove("loaded");
+        resetHorizontalBars();
+      }
+    });
+  }, { threshold: 0.3 }); // Changed from 0.6 to 0.3
+  skillsObserver.observe(skillsSection);
+}
+
 
   if (projectSection) {
     const projectObserver = new IntersectionObserver(entries => {
