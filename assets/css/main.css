@@ -451,3 +451,11 @@ body {
   margin: 0;
   font-size: 1.4rem;
 }
+
+
+.about-count-fonts{
+  font-family: var(--SmallFont);
+  font-style: italic;
+font-weight: 500;
+
+}

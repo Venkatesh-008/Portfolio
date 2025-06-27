@@ -21,14 +21,13 @@
   width: 300px;
   height: 300px;
   background-color: var(--white);
-  display: flex;
   border-radius: 12px;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+  display: flex;
+  padding: 1rem;
   transition: transform 0.5s ease, box-shadow 0.5s ease;
   transform-origin: center;
 }
+
 .skills-circle-container:hover {
   transform: scale(1.05) rotateZ(-2deg);
   box-shadow: 0 12px 25px rgba(128, 0, 128, 0.2);
@@ -36,17 +35,20 @@
   animation: pop-wiggle 0.6s ease-in-out forwards;
 }
 @keyframes pop-wiggle {
-  0%   { transform: scale(1) rotate(0); }
-  30%  { transform: scale(1.05) rotate(-1deg); }
-  60%  { transform: scale(1.03) rotate(1deg); }
-  100% { transform: scale(1.05) rotate(0); }
+  0% {
+    transform: scale(1) rotate(0);
+  }
+  30% {
+    transform: scale(1.05) rotate(-1deg);
+  }
+  60% {
+    transform: scale(1.03) rotate(1deg);
+  }
+  100% {
+    transform: scale(1.05) rotate(0);
+  }
 }
-.skills-circle-box span {
-  font-size: 20px;
-  font-family: var(--HeadingsFont);
-  position: relative;
-  left: 30%;
-}
+
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(250px, 1fr));
@@ -83,13 +85,18 @@
   background: var(--purple);
   width: 0;
   transition: width 2s ease;
+  text-align: center;
 }
 @keyframes progress {
-  0% { --percentage: 0; }
-  100% { --percentage: var(--value); }
+  0% {
+    --percentage: 0;
+  }
+  100% {
+    --percentage: var(--value);
+  }
 }
 @property --percentage {
-  syntax: '<number>';
+  syntax: "<number>";
   inherits: true;
   initial-value: 0;
 }
@@ -115,7 +122,10 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: conic-gradient(var(--primary) calc(var(--percentage) * 1%), var(--secondary) 0);
+  background: conic-gradient(
+    var(--primary) calc(var(--percentage) * 1%),
+    var(--secondary) 0
+  );
   mask: radial-gradient(white 55%, transparent 0);
   mask-mode: alpha;
   -webkit-mask: radial-gradient(#0000 55%, #000 0);
@@ -132,7 +142,7 @@
 }
 [role="progressbar"]::after {
   counter-reset: percentage var(--value);
-  content: counter(percentage) '%';
+  content: counter(percentage) "%";
   font-family: Helvetica, Arial, sans-serif;
   font-size: calc(var(--size) / 5);
   color: var(--primary);
@@ -148,16 +158,74 @@
   animation-fill-mode: forwards;
   animation-timing-function: ease;
 }
-.skill-section.loaded .fade-item[data-index="1"] { animation-delay: 0.2s; }
-.skill-section.loaded .fade-item[data-index="2"] { animation-delay: 0.4s; }
-.skill-section.loaded .fade-item[data-index="3"] { animation-delay: 0.6s; }
-.skill-section.loaded .fade-item[data-index="4"] { animation-delay: 0.8s; }
-.skill-section.loaded .fade-item[data-index="5"] { animation-delay: 1s; }
-.skill-section.loaded .fade-item[data-index="6"] { animation-delay: 1.02s; }
-.skill-section.loaded .fade-item[data-index="7"] { animation-delay: 1.04s; }
+.skill-section.loaded .fade-item[data-index="1"] {
+  animation-delay: 0.2s;
+}
+.skill-section.loaded .fade-item[data-index="2"] {
+  animation-delay: 0.4s;
+}
+.skill-section.loaded .fade-item[data-index="3"] {
+  animation-delay: 0.6s;
+}
+.skill-section.loaded .fade-item[data-index="4"] {
+  animation-delay: 0.8s;
+}
+.skill-section.loaded .fade-item[data-index="5"] {
+  animation-delay: 1s;
+}
+.skill-section.loaded .fade-item[data-index="6"] {
+  animation-delay: 1.02s;
+}
+.skill-section.loaded .fade-item[data-index="7"] {
+  animation-delay: 1.04s;
+}
 @keyframes fadeInUpScale {
-  0%   { opacity: 0; transform: translateY(40px) scale(0.95); }
-  60%  { opacity: 1; transform: translateY(-10px) scale(1.02); }
-  100% { opacity: 1; transform: translateY(0) scale(1); }
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-10px) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
+.skills-circle-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.skills-circle-box .si {
+  width: var(--size);
+  height: var(--size);
+  margin-bottom: 15px; 
+  display: grid;
+  place-items: center;
+}
+.skills-circle-box .circle-label {
+  font-size: 1.6rem; 
+  font-family: "Nunito", sans-serif;
+  font-weight: 1000;
+  color: var(--primary);
+  text-align: center;
+}
+
+
+.skill-item .box h3 {
+  font-family: 'Nunito', sans-serif;  
+  font-weight: 800;                   
+  font-size: 1.6rem;                
+  color: var(--white);             
+  display: flex;
+  justify-content: space-between;
+  padding: 0.7rem 0;
+}
