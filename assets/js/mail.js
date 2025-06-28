@@ -1,15 +1,17 @@
-  (function () {
-    emailjs.init("AihhQJdeuzVLBlNIV"); // Replace with your actual User ID
-  })();
+(function () {
+  emailjs.init("AihhQJdeuzVLBlNIV"); // Replace with your actual EmailJS public key
+})();
 
-  document.getElementById("contact-form").addEventListener("submit", function (e) {
-    e.preventDefault();
+document.getElementById("contact-form").addEventListener("submit", function (e) {
+  e.preventDefault();
+  const form = this;
 
-    emailjs.sendForm("service_mrh9uxw", "template_l1aj86o", this)
-      .then(function () {
-        alert("✅ Message sent successfully!");
-      }, function (error) {
-        console.error("❌ Failed...", error);
-        alert("❌ Failed to send message. Check console.");
-      });
-  });
+  emailjs.sendForm("service_dueyfek", "template_l1aj86o", form)
+    .then(() => {
+      alert("✅ Message sent successfully via SMTP!");
+      form.reset(); // ✅ This clears the form
+    }, (error) => {
+      console.error("❌ Failed to send message", error);
+      alert("❌ Failed to send. See console for error.");
+    });
+});
